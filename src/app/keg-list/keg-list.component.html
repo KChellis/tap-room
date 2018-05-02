@@ -1,7 +1,7 @@
 <div class="">
   <ul>
     <li *ngFor="let keg of childKegList">
-      <div class="row item keg.color">
+      <div class="row item {{keg.color}}">
         <div class="col-sm-5">
           <h4>{{keg.name}} by {{keg.brand}}</h4>
           <p>{{keg.type}}, ABV: {{keg.abv}} IBU: {{keg.ibu}}</p>
@@ -25,7 +25,7 @@
       </div>
     </li>
   </ul>
-  <button *ngIf="mode ==='employee'" (click)="onClick()" class="btn btn-info add" >Add Keg</button>
-  <button *ngIf="mode ==='patron'" (click)="changeMode()" class="btn btn-info add">Employee mode</button>
-  <button *ngIf="mode ==='employee'" (click)="changeMode()" class="btn btn-info add">Patron mode</button>
+  <button *ngIf="mode ==='employee'" (click)="onClick()" class="btn btn-info" >Add Keg</button>
+  <button *ngIf="mode ==='patron'" (click)="changeMode()" class="btn btn-info">Employee mode</button>
+  <button *ngIf="mode ==='employee'" (click)="changeMode()" class="btn btn-info">Patron mode</button>
 </div>

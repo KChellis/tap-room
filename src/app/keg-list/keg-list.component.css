@@ -1,12 +1,29 @@
 ul {
   list-style: none;
 }
-
 button {
   box-shadow: 4px 4px 4px black;
   margin: 10px;
+  background-color: #a5a4a5;
+}
+.light {
+  background-color: #f4d177 !important;
+}
+.medium {
+  background-color: #e58939;
 }
 
+.dark {
+  background-color: #723703;
+  color: white;
+}
+.cider {
+  background-color: #b4d68b;
+}
+.wine {
+  background-color: #89024f;
+  color: white;
+}
 .item {
   border: 3px solid black;
   margin: 3px;
