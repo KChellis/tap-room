@@ -1,2 +1,3 @@
 
 <app-keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
+<app-edit-keg [selectedKeg]="selectedKeg" (endEdit)="endEdit()"><app-edit-keg>

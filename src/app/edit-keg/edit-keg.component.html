@@ -1,3 +1,16 @@
-<p>
-  edit-keg works!
-</p>
+<div *ngIf="selectedKeg">
+  <h3>Edit {{selectedKeg.name}}</h3>
+  <label>Name</label>
+  <input [(ngModel)]="selectedKeg.name"><br>
+  <label>Brand</label>
+  <input [(ngModel)]="selectedKeg.brand"><br>
+  <label>Type</label>
+  <input [(ngModel)]="selectedKeg.type"><br>
+  <label>ABV</label>
+  <input [(ngModel)]="selectedKeg.abv"><br>
+  <label>IBU</label>
+  <input [(ngModel)]="selectedKeg.ibu"><br>
+  <label>Price</label>
+  <input [(ngModel)]="selectedKeg.name"><br>
+
+</div>

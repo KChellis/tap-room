@@ -17,7 +17,8 @@ import { KegListComponent } from './keg-list/keg-list.component';
     KegListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

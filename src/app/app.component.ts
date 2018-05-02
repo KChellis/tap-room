@@ -24,8 +24,12 @@ export class AppComponent {
       if (input[1] === 'delete') {
         let index = this.masterKegList.indexOf(input[0]);
         this.masterKegList.splice(index, 1);
+        this.selectedKeg = null;
       }else {
         this.selectedKeg = input[0];
       }
+    }
+    endEdit() {
+      this.selectedKeg = null;
     }
 }
