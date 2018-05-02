@@ -1,16 +1,21 @@
 <div *ngIf="selectedKeg">
   <h3>Edit {{selectedKeg.name}}</h3>
   <label>Name</label>
-  <input [(ngModel)]="selectedKeg.name"><br>
+  <input [(ngModel)]="selectedKeg.name" placeholder="Enter name here"><br>
   <label>Brand</label>
-  <input [(ngModel)]="selectedKeg.brand"><br>
+  <input [(ngModel)]="selectedKeg.brand" placeholder="Enter brand here"><br>
   <label>Type</label>
-  <input [(ngModel)]="selectedKeg.type"><br>
+  <input [(ngModel)]="selectedKeg.type" placeholder="Enter type here"><br>
   <label>ABV</label>
-  <input [(ngModel)]="selectedKeg.abv"><br>
+  <input [(ngModel)]="selectedKeg.abv" placeholder="Enter ABV here"><br>
   <label>IBU</label>
-  <input [(ngModel)]="selectedKeg.ibu"><br>
-  <label>Price</label>
-  <input [(ngModel)]="selectedKeg.name"><br>
+  <input [(ngModel)]="selectedKeg.ibu" placeholder="Enter IBU here"><br>
+  <label>Pint price</label>
+  <input [(ngModel)]="selectedKeg.price[0]" placeholder="Enter Price here"><br>
+  <label>32oz growler price</label>
+  <input [(ngModel)]="selectedKeg.price[1]" placeholder="Enter Price here"><br>
+  <label>64oz growler price</label>
+  <input [(ngModel)]="selectedKeg.price[2]" placeholder="Enter Price here"><br>
+  <button (click)="onClick()" class="btn btn-info">Done Editing</button>
 
 </div>

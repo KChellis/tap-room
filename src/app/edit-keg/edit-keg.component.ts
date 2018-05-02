@@ -9,6 +9,7 @@ import { Keg } from '../models/keg.model';
 export class EditKegComponent {
   @Input() selectedKeg: Keg;
   @Output() endEdit = new EventEmitter();
+  
 
   onClick() {
     this.endEdit.emit();

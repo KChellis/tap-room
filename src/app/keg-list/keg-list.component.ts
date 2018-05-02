@@ -9,10 +9,13 @@ import { Keg } from '../models/keg.model';
 export class KegListComponent {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
-
+  @Output() addKeg = new EventEmitter();
 
 
   selectKeg(output) {
     this.clickSender.emit(output);
+  }
+  onClick() {
+    this.addKeg.emit();
   }
 }
