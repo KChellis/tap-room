@@ -11,13 +11,15 @@ export class KegListComponent {
   @Output() clickSender = new EventEmitter();
   @Output() addKeg = new EventEmitter();
 
+  mode: string = 'patron';
+
   pintCount(keg) {
     if (keg.pints <= 10) {
-      return "empty"
+      return 'empty';
     }else if (keg.pints <= 62) {
-      return "half"
+      return 'half';
     }else {
-      return "full"
+      return 'full';
     }
   }
 
@@ -26,5 +28,12 @@ export class KegListComponent {
   }
   onClick() {
     this.addKeg.emit();
+  }
+  changeMode() {
+    if(this.mode === 'patron') {
+      this.mode = 'employee';
+    }else {
+      this.mode = 'patron';
+    }
   }
 }
