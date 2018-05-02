@@ -37,8 +37,9 @@ button {
 .full {
   background-color: green;
 }
-.bg-warning, .bg-danger, .bg-success {
-  height: 100%;
+.empty, .half, .full {
+  color: black;
+  padding: 20px;
   text-align: center;
-  display: block;
+  margin-top: 8px;
 }

@@ -17,7 +17,7 @@
             <button *ngIf="keg.pints >3"(click)="selectKeg([keg, 'grwl64'])" class="btn btn-info">Growler(64oz)</button>
           </div>
         </div>
-        <div class="col-sm-3 card">
+        <div class="col-sm-3">
           <div [class]="pintCount(keg)">
             <h4>{{keg.pints}} pints left</h4>
           </div>
@@ -25,7 +25,7 @@
       </div>
     </li>
   </ul>
-  <button *ngIf="mode ==='employee'" (click)="onClick()" class="btn btn-info" >Add Keg</button>
+  <button *ngIf="mode ==='employee'" (click)="onClick()" class="btn btn-info add" >Add Keg</button>
   <button *ngIf="mode ==='patron'" (click)="changeMode()" class="btn btn-info">Employee mode</button>
   <button *ngIf="mode ==='employee'" (click)="changeMode()" class="btn btn-info">Patron mode</button>
 </div>
