@@ -16,4 +16,16 @@ export class AppComponent {
     new Keg('Maid Marion', '2 Towns Ciderhouse', 'Marionberry Cider', 6, 0, 5.00),
     new Keg('Willamette Valley Pinot Noir', 'Boedecker Cellars', 'Pinot Noir', 14, 0, 6.00)
   ]
+
+    selectedKeg: Keg = null;
+    operation: string;
+
+    editKeg(input) {
+      if (input[1] === 'delete') {
+        let index = this.masterKegList.indexOf(input[0]);
+        this.masterKegList.splice(index, 1);
+      }else {
+        this.selectedKeg = input[0];
+      }
+    }
 }
