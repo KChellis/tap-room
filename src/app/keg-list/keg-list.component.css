@@ -1,0 +1,8 @@
+ul {
+  list-style: none;
+}
+
+button {
+  box-shadow: 4px 4px 4px black;
+  margin: 5px;
+}

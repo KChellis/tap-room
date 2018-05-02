@@ -1,3 +1,18 @@
-<p>
-  keg-list works!
-</p>
+<div class="">
+  <ul>
+    <li *ngFor="let keg of childKegList">
+      <div class="row">
+        <div class="keg col-sm-4">
+          <h4>{{keg.name}} by {{keg.brand}}</h4>
+          <p>{{keg.type}}, ABV: {{keg.abv}} IBU: {{keg.ibu}} pint: ${{keg.price}}</p>
+        </div>
+
+        <div class="buttons col-sm-4">
+          <button class="btn btn-info" type="button" name="button">Edit</button>
+          <button class="btn btn-info" type="button" name="button">Delete</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <button class="btn btn-info" type="button" name="button">Add Keg</button>
+</div>
