@@ -4,14 +4,24 @@ ul {
 
 button {
   box-shadow: 4px 4px 4px black;
-  margin: 5px;
+  margin: 10px;
 }
 
-.keg {
+.item {
   border: 3px solid black;
   margin: 3px;
 }
-
-.keg button {
-  margin-top: 17px;
+.empty {
+  background-color: red;
+}
+.half {
+  background-color: yellow;
+}
+.full {
+  background-color: green;
+}
+.bg-warning, .bg-danger, .bg-success {
+  height: 100%;
+  text-align: center;
+  display: block;
 }

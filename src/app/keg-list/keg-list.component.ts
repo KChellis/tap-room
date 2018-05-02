@@ -11,6 +11,15 @@ export class KegListComponent {
   @Output() clickSender = new EventEmitter();
   @Output() addKeg = new EventEmitter();
 
+  pintCount(keg) {
+    if (keg.pints <= 10) {
+      return "empty"
+    }else if (keg.pints <= 62) {
+      return "half"
+    }else {
+      return "full"
+    }
+  }
 
   selectKeg(output) {
     this.clickSender.emit(output);
