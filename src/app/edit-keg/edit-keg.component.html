@@ -16,8 +16,12 @@
   <input [(ngModel)]="selectedKeg.price[1]" placeholder="Enter Price here"><br>
   <label>64oz growler price</label>
   <input [(ngModel)]="selectedKeg.price[2]" placeholder="Enter Price here"><br>
-  <label>Color</label>
-  <input [(ngModel)]="selectedKeg.color" placeholder="Enter Color here"><br>
+  <label>Color</label><br>
+  <input type="radio" [(ngModel)]="selectedKeg.color" value="light">light<br>
+  <input type="radio" [(ngModel)]="selectedKeg.color" value="medium">Medium<br>
+  <input type="radio" [(ngModel)]="selectedKeg.color" value="dark">Dark<br>
+  <input type="radio" [(ngModel)]="selectedKeg.color" value="cider">Cider<br>
+  <input type="radio" [(ngModel)]="selectedKeg.color" value="wine">Wine<br>
   <button (click)="onClick()" class="btn btn-info">Done Editing</button>
 
 </div>
