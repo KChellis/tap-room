@@ -23,6 +23,9 @@ export class KegListComponent {
     }
   }
 
+  refillKeg(keg) {
+    keg.pints = 124;
+  }
   selectKeg(output) {
     this.clickSender.emit(output);
   }
