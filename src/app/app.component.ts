@@ -25,16 +25,9 @@ export class AppComponent {
         let index = this.masterKegList.indexOf(input[0]);
         this.masterKegList.splice(index, 1);
         this.selectedKeg = null;
-      }else if (input[1] === 'pint') {
-        input[0].pints -= 1;
-      }else if (input[1] === 'grwl32') {
-        input[0].pints -= 2;
-      }else if (input[1] === 'grwl64') {
-        input[0].pints -= 4;
       }else {
         this.selectedKeg = input[0];
       }
-      console.log(input[0].pints);
     }
     endEdit() {
       this.selectedKeg = null;

@@ -13,18 +13,28 @@ export class KegListComponent {
 
   mode: string = 'patron';
 
-  pintCount(keg) {
-    if (keg.pints <= 10) {
-      return 'empty';
-    }else if (keg.pints <= 62) {
-      return 'half';
-    }else {
-      return 'full';
+  pintCount(input) {
+    if (input[1] === 'pint') {
+      input[0].pints -= 1;
+    }else if (input[1] === 'grwl32') {
+      input[0].pints -= 2;
+    }else if (input[1] === 'grwl64') {
+      input[0].pints -= 4;
     }
+    if (input[0].pints <= 10) {
+      input[0].level="empty";
+    }else if (input[0].pints <= 62) {
+      input[0].level="half";
+    }else {
+      input[0].level="full";
+    }
+    input[0].percent = Math.round((input[0].pints/124)*100) + '%';
   }
 
   refillKeg(keg) {
     keg.pints = 124;
+    keg.percent = Math.round((keg.pints/124)*100) + '%';
+    keg.level='full';
   }
   selectKeg(output) {
     this.clickSender.emit(output);

@@ -29,17 +29,11 @@ button {
   margin: 3px;
 }
 .empty {
-  background-color: red;
+  background-color: red !important;
 }
 .half {
-  background-color: yellow;
+  background-color: yellow !important;
 }
 .full {
-  background-color: green;
-}
-.empty, .half, .full {
-  color: black;
-  padding: 20px;
-  text-align: center;
-  margin-top: 8px;
+  background-color: green !important;
 }

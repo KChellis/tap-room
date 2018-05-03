@@ -12,15 +12,16 @@
           <div *ngIf="mode ==='employee'">
             <button (click)="selectKeg([keg, 'edit'])" class="btn btn-info">Edit</button>
             <button (click)="selectKeg([keg, 'delete'])" class="btn btn-info">Delete</button><br>
-            <button *ngIf="keg.pints >0" (click)="selectKeg([keg, 'pint'])" class="btn btn-info">Pint</button>
-            <button *ngIf="keg.pints >1"(click)="selectKeg([keg, 'grwl32'])" class="btn btn-info">Growler(32oz)</button>
-            <button *ngIf="keg.pints >3"(click)="selectKeg([keg, 'grwl64'])" class="btn btn-info">Growler(64oz)</button>
+            <button *ngIf="keg.pints >0" (click)="pintCount([keg, 'pint'])" class="btn btn-info">Pint</button>
+            <button *ngIf="keg.pints >1"(click)="pintCount([keg, 'grwl32'])" class="btn btn-info">Growler(32oz)</button>
+            <button *ngIf="keg.pints >3"(click)="pintCount([keg, 'grwl64'])" class="btn btn-info">Growler(64oz)</button>
             <button *ngIf="keg.pints <1"(click)="refillKeg(keg)" class="btn btn-info">Replace Keg</button>
           </div>
         </div>
         <div class="col-sm-3">
-          <div [class]="pintCount(keg)">
-            <h4>{{keg.pints}} pints left</h4>
+          <div class="progress level-bar">
+            <div class="progress-bar {{keg.level}}" role="progressbar" [style.width]="keg.percent" [attr.aria-valuenow]="keg.pints" aria-valuemin="0" aria-valuemax="124">
+            </div>
           </div>
         </div>
       </div>
