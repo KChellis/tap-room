@@ -33,7 +33,11 @@ button {
 }
 .half {
   background-color: yellow !important;
+  color: black;
 }
 .full {
   background-color: green !important;
+}
+.col-sm-3 {
+  margin-top: 40px;
 }
