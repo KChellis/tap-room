@@ -1,6 +1,14 @@
 <div class="">
+
+  <select (change)="onChange($event.target.value)">
+    <option value="" disabled selected>Sort by</option>
+    <option value="pints">Pints left</option>
+    <option value="name">Name</option>
+    <option value="abv">Alcohol Content</option>
+    <option value="ibu">Bitterness</option>
+  </select>
   <ul>
-    <li *ngFor="let keg of childKegList">
+    <li *ngFor="let keg of childKegList | alcohol:filter">
       <div class="row item {{keg.color}}">
         <div class="col-sm-5">
           <h4>{{keg.name}} by {{keg.brand}}</h4>

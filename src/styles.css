@@ -1,3 +1,8 @@
 h1 {
   text-align: center;
+  font-size: 50px;
+}
+body {
+  background-color: #274d21;
+background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
 }

@@ -12,6 +12,11 @@ export class KegListComponent {
   @Output() addKeg = new EventEmitter();
 
   mode: string = 'patron';
+  filter: string = '';
+
+  onChange (input) {
+    this.filter = input;
+  }
 
   pintCount(input) {
     if (input[1] === 'pint') {
